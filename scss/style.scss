@@ -24,7 +24,7 @@ body {
 }
 
 .page-background {
-  background: linear-gradient($gradient-top, $gradient-bottom);
+  background: linear-gradient($gradient-top 0%, $gradient-bottom 200%);
   flex: 1 0 auto;
   display: grid;
   padding: 148px 24px 84px;
@@ -36,6 +36,7 @@ body {
   place-self: center;
   height: $container-height;
   width: 100%;
+  box-shadow: 0 40px 25px -10px rgba(0, 0, 0, 0.2);
 }
 
 // ====== FAQ =======

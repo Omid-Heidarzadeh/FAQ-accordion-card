@@ -16,7 +16,7 @@ body {
 }
 
 .page-background {
-  background: linear-gradient(#af67e9, #6565e7);
+  background: linear-gradient(#af67e9 0%, #6565e7 200%);
   flex: 1 0 auto;
   display: grid;
   padding: 148px 24px 84px;
@@ -28,6 +28,7 @@ body {
   place-self: center;
   height: 535px;
   width: 100%;
+  box-shadow: 0 40px 25px -10px rgba(0, 0, 0, 0.2);
 }
 
 .faq__illustration {
