@@ -27,6 +27,28 @@ body {
   border-radius: 20px;
   place-self: center;
   height: 535px;
+  width: 100%;
+}
+
+.faq__illustration {
+  margin: 10px auto;
+}
+
+.mobile.pattern,
+.mobile.woman {
+  margin: -10px auto;
+  display: block;
+  position: relative;
+}
+
+.mobile.pattern {
+  filter: brightness(50%);
+}
+
+.mobile.woman {
+  margin: 0 auto;
+  top: -203px;
+  left: -15px;
 }
 
 .desktop {

@@ -23,7 +23,6 @@ body {
   min-height: 100vh;
 }
 
-// ====== FAQ =======
 .page-background {
   background: linear-gradient($gradient-top, $gradient-bottom);
   flex: 1 0 auto;
@@ -36,6 +35,33 @@ body {
   border-radius: 20px;
   place-self: center;
   height: $container-height;
+  width: 100%;
+}
+
+// ====== FAQ =======
+.faq__illustration {
+  margin: 10px auto;
+}
+
+.mobile.pattern,
+.mobile.woman {
+  margin: -10px auto;
+  display: block;
+  position: relative;
+}
+
+.mobile.pattern {
+  filter: brightness(50%);
+}
+
+.mobile.woman {
+  margin: 0 auto;
+  top: -203px;
+  left: -15px;
+}
+
+.mobile.box {
+  // display: none;
 }
 
 .desktop {
