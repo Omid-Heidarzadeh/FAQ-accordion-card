@@ -32,21 +32,23 @@ body {
 
 .container {
   background-color: #fff;
-  border-radius: 20px;
-  place-self: center;
-  height: $container-height;
-  width: 100%;
+  border-radius: 25px;
   box-shadow: 0 40px 25px -10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 2rem;
+  place-self: center;
+  width: 100%;
+  transition: height 1s;
 }
 
 // ====== FAQ =======
+// ====== ILLUSTRATION ======
 .faq__illustration {
-  margin: 10px auto;
+  height: 135px;
 }
 
 .mobile.pattern,
 .mobile.woman {
-  margin: -10px auto;
+  margin: 0 auto;
   display: block;
   position: relative;
 }
@@ -57,7 +59,7 @@ body {
 
 .mobile.woman {
   margin: 0 auto;
-  top: -203px;
+  top: -213px;
   left: -15px;
 }
 
@@ -69,9 +71,63 @@ body {
   display: none;
 }
 
+// ===== HEADING =====
+.faq__body__heading {
+  color: $heading-text;
+  font: bold 3rem "Kumbh Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+// ===== BODY CONTENT =====
 ::marker {
   font-size: 0;
   color: transparent;
+}
+
+.faq__body__content {
+  font-size: 1.2rem;
+  padding: 0 24px;
+}
+
+.faq__field {
+  padding: 16px 0;
+  &:not(:first-child) {
+    border-top: 2px solid $dividers;
+  }
+  &[open] {
+    color: $summary-text;
+    font-weight: 700;
+    .shevron {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.faq__question {
+  padding-right: 20px;
+  position: relative;
+  transition: color 0.3s;
+  &:hover {
+    color: $text-hover;
+    cursor: pointer;
+  }
+}
+
+.shevron {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+  transform-origin: center center;
+}
+
+.faq__answer {
+  color: $details-text;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 1rem 0 0;
 }
 
 .attribution {
