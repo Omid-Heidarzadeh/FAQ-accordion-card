@@ -17,4 +17,4 @@
 .prettierignore
 *.map
 style-guide.md
-
+package.json

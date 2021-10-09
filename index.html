@@ -14,14 +14,13 @@
 </head>
 
 <body>
-  <main class="page-background">
+  <div class="page-background">
     <!-- CONTAINER START -->
-    <div class="container">
+    <main class="container">
       <!-- FAQ ILLUSTRATION START -->
-      <header class="faq__illustration">
-        <img class="mobile pattern" src="images/bg-pattern-mobile.svg" alt="">
-        <img class="desktop pattern" src="images/bg-pattern-desktop.svg" alt="">
-        <svg class="mobile woman" width="266" height="196" xmlns="http://www.w3.org/2000/svg"
+      <header class="faq__image image">
+        <img class="image__pattern--mobile" src="images/bg-pattern-mobile.svg" alt="">
+        <svg class="image__woman--mobile" width="266" height="196" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <defs>
             <linearGradient x1="61.181%" y1="36.858%" x2="40.788%" y2="55.524%" id="a">
@@ -165,63 +164,66 @@
             </g>
             <g transform="translate(50 68)">
               <use fill="#000" filter="url(#f)" xlink:href="#g" />
-              <use class="mobile box" fill="#FF9271" xlink:href="#g" />
+              <use class="image__box--mobile" fill="#FF9271" xlink:href="#g" />
             </g>
-            <path class="mobile box" fill="#DF5C34" fill-rule="nonzero"
+            <path class="image__box--mobile" fill="#DF5C34" fill-rule="nonzero"
               d="M70.984 93.896v26.935l23.694-14.013V79.883z" />
-            <path class="mobile box" fill="#F47B56" fill-rule="nonzero"
+            <path class="image__box--mobile" fill="#F47B56" fill-rule="nonzero"
               d="M50 81.878L74.347 68l20.33 11.883-23.693 14.013z" />
-            <path class="mobile box"
+            <path class="image__box--mobile"
               d="M71.541 74.182a12.971 12.971 0 017.104 1.565c1.243.731 1.922 1.494 2.018 2.29.096.795-.314 1.487-1.281 2.07a4.557 4.557 0 01-1.493.59c-.434.103-.88.149-1.326.135l-.487-.038c.046.109.076.223.09.34a1.566 1.566 0 01-.256.776c-.254.43-.616.786-1.05 1.032a6.316 6.316 0 01-3.35.885 6.623 6.623 0 01-3.479-.878c-.999-.59-1.511-1.283-1.55-2.078a2.245 2.245 0 011.281-2.007 4.244 4.244 0 011.179-.507 4.588 4.588 0 011.018-.173h.353l-.641-.385 1.8-1.122 4.17 2.456a2.188 2.188 0 002.075 0c.884-.551.568-1.276-.948-2.174a9.63 9.63 0 00-5.278-1.174 10.835 10.835 0 00-5.509 1.584c-1.511.945-2.26 2.072-2.248 3.38 0 1.283.8 2.424 2.357 3.341 1.7.95 3.629 1.41 5.573 1.328a10.463 10.463 0 005.509-1.462 6.177 6.177 0 001.53-1.283c.293-.31.512-.683.641-1.09l.09-.404 2.376.134c.004.073.004.146 0 .219-.043.196-.101.389-.173.577-.103.3-.24.59-.41.859-.244.364-.527.7-.845 1-.42.405-.88.762-1.377 1.065a12.801 12.801 0 01-4.663 1.68 17.588 17.588 0 01-5.439.096 12.448 12.448 0 01-4.67-1.526 6.064 6.064 0 01-2.651-2.783 4.096 4.096 0 010-3.296 6.346 6.346 0 012.633-2.88 14.483 14.483 0 017.327-2.142zm2.332 6.631a1.372 1.372 0 00-.8-1 3.29 3.29 0 00-1.666-.455 2.81 2.81 0 00-1.55.397c-.384.187-.631.573-.64 1 .058.445.345.827.755 1.007a3.27 3.27 0 001.697.43 3.046 3.046 0 001.627-.423c.373-.17.61-.546.603-.956"
               fill="#3E2928" fill-rule="nonzero" />
           </g>
         </svg>
-        <img class="desktop woman" src="images/illustration-woman-online-desktop.svg" alt="">
-        <img class="desktop box" src="images/illustration-box-desktop.svg" alt="">
+        <div class="image__container">
+          <img class="image__pattern--desktop" src="images/bg-pattern-desktop.svg" alt="">
+          <img class="image__woman--desktop" src="images/illustration-woman-online-desktop.svg" alt="">
+        </div>
+        <img class="image__box--desktop" src="images/illustration-box-desktop.svg" alt="">
       </header>
       <!-- FAQ ILLUSTRATION END -->
       <!-- FAQ BODY START -->
-      <div class="faq__body">
-        <h1 class="faq__body__heading">FAQ</h1>
+      <section class="faq__body">
+        <h1 class="faq__heading">FAQ</h1>
         <!-- FAQ BODY-CONTENT START -->
-        <section class="faq__body__content">
+        <div class="faq__body__content">
           <details class="faq__field">
             <summary class="faq__question">How many team members can I invite? <span class="shevron"><img
-                  src="images/icon-arrow-down.svg"></span></summary>
+                  src="images/icon-arrow-down.svg" alt=""></span></summary>
             <p class="faq__answer">You can invite up to 2 additional users on the Free plan. There is no limit on
               team members for the Premium plan.</p>
           </details>
           <details class="faq__field">
             <summary class="faq__question">What is the maximum file upload size? <span class="shevron"><img
-                  src="images/icon-arrow-down.svg"></span></summary>
+                  src="images/icon-arrow-down.svg" alt=""></span></summary>
             <p class="faq__answer">No more than 2GB. All files in your account must fit your allotted storage
               space.</p>
           </details>
           <details class="faq__field">
             <summary class="faq__question">How do I reset my password? <span class="shevron"><img
-                  src="images/icon-arrow-down.svg"></span>
+                  src="images/icon-arrow-down.svg" alt=""></span>
             </summary>
             <p class="faq__answer">Click “Forgot password” from the login page or “Change password” from your
               profile page. A reset link will be emailed to you.</p>
           </details>
           <details class="faq__field">
             <summary class="faq__question">Can I cancel my subscription? <span class="shevron"><img
-                  src="images/icon-arrow-down.svg"></span></summary>
+                  src="images/icon-arrow-down.svg" alt=""></span></summary>
             <p class="faq__answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
           </details>
           <details class="faq__field">
             <summary class="faq__question">Do you provide additional support? <span class="shevron"><img
-                  src="images/icon-arrow-down.svg"></span></summary>
+                  src="images/icon-arrow-down.svg" alt=""></span></summary>
             <p class="faq__answer">Chat and email support is available 24/7. Phone lines are open during normal
               business hours.</p>
           </details>
-        </section>
+        </div>
         <!-- FAQ BODY-CONTENT END -->
-      </div>
+      </section>
       <!-- FAQ BODY END -->
-    </div>
+    </main>
     <!-- CONTAINER END -->
-  </main>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<wbr />
     Coded by <a href="#">Omid Heidarzadeh</a>.
