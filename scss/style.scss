@@ -1,11 +1,11 @@
 @import "variables";
-@import "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
 }
+
 :root {
   font: {
     family: "Kumbh Sans", Arial, Helvetica, sans-serif;
@@ -15,11 +15,7 @@
 
 body {
   display: flex;
-  flex-flow: column;
-  // alternative way
-  // display: grid;
-  // grid-template: 1fr 15px / 1fr;
-  // grid-auto-flow: column;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -38,8 +34,7 @@ body {
   grid-auto-flow: column;
   grid-template: 135px 1fr / 1fr;
   width: 100%;
-  max-width: 40rem;
-  // min-height: 100%;
+  max-width: 400px;
   place-self: center;
   position: relative;
   @media screen and (min-width: 900px) {
@@ -69,14 +64,15 @@ body {
 
 .image__pattern--mobile,
 .image__woman--mobile {
-  margin: 0 auto;
+  justify-self: center;
   position: relative;
 }
+
 .image__pattern--mobile {
   filter: brightness(50%);
 }
+
 .image__woman--mobile {
-  margin: 0 auto;
   top: -213px;
   left: -15px;
 }
@@ -86,7 +82,7 @@ body {
 }
 
 .image,
-.image__container {
+.image__scene {
   width: 100%;
   height: 100%;
 }
@@ -98,18 +94,13 @@ body {
 
   [class$="--desktop"] {
     display: block;
-  }
-
-  .image__container {
-    position: relative;
-    contain: content;
-  }
-
-  .image__pattern--desktop,
-  .image__woman--desktop,
-  .image__box--desktop {
     position: absolute;
     top: 50%;
+  }
+
+  .image__scene {
+    position: relative;
+    overflow: hidden;
   }
 
   .image__pattern--desktop {
@@ -138,7 +129,6 @@ body {
   margin: 20px auto 35px;
   @media screen and (min-width: 900px) {
     margin: 35px auto 35px 10px;
-    // margin-left: 10px;
     max-width: 380px;
   }
 }
@@ -148,10 +138,9 @@ body {
   color: $heading-text;
   font: bold 3rem "Kumbh Sans", Arial, Helvetica, sans-serif;
   text-align: center;
-  // margin-bottom: 20px;
   @media screen and (min-width: 900px) {
     text-align: left;
-    padding: 1rem 2.4rem;
+    padding: 0 24px;
   }
 }
 
@@ -162,7 +151,7 @@ body {
 }
 
 .faq__body__content {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 20px 24px;
 }
 
@@ -173,7 +162,10 @@ body {
   }
   &[open] {
     color: $summary-text;
-    font-weight: 700;
+    font: {
+      weight: 700;
+      size: 1.3rem;
+    }
     .shevron {
       transform: rotate(180deg);
     }
@@ -196,14 +188,14 @@ body {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.2s;
-  transform-origin: center center;
+  transform-origin: center 30%;
 }
 
 .faq__answer {
   color: $details-text;
   font-weight: 400;
   line-height: 1.5;
-  padding: 1rem 0 0;
+  padding: 10px 20px 0 0;
 }
 // ===== END OF CONTENT =====
 // ===== END OF BODY =====
@@ -212,7 +204,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
-  flex: 0 1 $attribution-height;
+  flex: 0 1 15px;
 }
 
 .attribution a {
