@@ -48,6 +48,9 @@ body {
     max-width: 920px;
     min-height: 510px;
     place-items: center start;
+    &:hover .image__box--desktop {
+      transform: translate(-35px, -25%);
+    }
   }
 }
 
@@ -123,6 +126,7 @@ body {
   .image__box--desktop {
     left: -93px;
     transform: translateY(-25%);
+    transition: transform 0.5s;
   }
 }
 // ===== END OF ILLUSTRATION =====

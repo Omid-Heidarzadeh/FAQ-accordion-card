@@ -42,6 +42,9 @@ body {
     min-height: 510px;
     place-items: center start;
   }
+  .container:hover .image__box--desktop {
+    transform: translate(-35px, -25%);
+  }
 }
 
 .faq__image {
@@ -118,6 +121,7 @@ body {
   .image__box--desktop {
     left: -93px;
     transform: translateY(-25%);
+    transition: transform 0.5s;
   }
 }
 .faq__body {
