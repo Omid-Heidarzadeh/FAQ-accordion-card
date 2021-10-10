@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [FAQ-accordion-card](https://github.com/Omid-Heidarzadeh/FAQ-accordion-card/tree/main)
-- Live Site URL: [live site](https://omid-heidarzadeh.github.io/FAQ-accordion-card/)
+- Live Site URL: [Live site](https://omid-heidarzadeh.github.io/FAQ-accordion-card/)
 
 ### Built with
 
@@ -45,7 +45,7 @@ Users should be able to:
 
 ### What I learned
 
-1- I decided to use `<details>` and `<summary>` HTML tags for structuring accordion, so at first I had to remove or hide the default browser triangle markers. The corresponding selector for this pseudo element is `::marker` but for some reason properties like `display`, `visibility`, `width` and `height` doesn't have any effect on it. Therefore, used `font-size: 0` and `color: transparent` as an alternative trick.
+1- I decided to use `<details>` and `<summary>` HTML tags for structuring accordion, so at first I had to remove or hide the default browser triangle markers. The corresponding selector for this pseudo-element is ::marker but for some reason properties like display, visibility, width, and height don't have any effect on it. Therefore, used font-size: 0 and color: transparent as an alternative trick.
 
 ```CSS
 ::marker {
@@ -75,11 +75,11 @@ Users should be able to:
 }
 ```
 
-4- I needed to complete the challenge without using Javascript as a bonus. Using `<details>` and `<summary>` tags was a good start to acheive this goal, but there was still a problem.
+4- I was needed to complete the challenge without using Javascript as a bonus. Using `<details>` and `<summary>` tags was a good start for achieving this goal, but there was still a problem.
 
-> How to change properties and appearance of child-elements according to current state of these two tags?
+> How to change the properties and appearance of child elements according to the current state of these two tags?
 
-By inspecting these elements using browser I figured out that when the `<summary>` is opened, an `"open"` attribute is added to the `<details>` element. So I used CSS attribute selector like this:
+By inspecting these elements using the browser I figured out that when the `<summary>` is opened, an `"open"` attribute is added to the `<details>` element. So I used a CSS attribute selector like this:
 
 ```css
 &[open] {

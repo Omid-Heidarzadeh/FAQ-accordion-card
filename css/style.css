@@ -204,7 +204,7 @@ body {
   font-weight: 700;
   font-size: 1.3rem;
 }
-.faq__field[open] .shevron {
+.faq__field[open] .chevron {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -222,7 +222,7 @@ body {
   cursor: pointer;
 }
 
-.shevron {
+.chevron {
   position: absolute;
   right: 0;
   top: 50%;
