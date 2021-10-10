@@ -1,5 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
 }
@@ -10,14 +18,24 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
 }
 
 .page-background {
+  background: -webkit-gradient(linear, top, bottom, from(#af67e9), to(#6565e7));
+  background: -o-linear-gradient(#af67e9 0%, #6565e7 100%);
   background: linear-gradient(#af67e9 0%, #6565e7 100%);
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+  display: -ms-grid;
   display: grid;
   padding: 148px 24px 84px;
 }
@@ -25,17 +43,25 @@ body {
 .container {
   background-color: #fff;
   border-radius: 25px;
+  -webkit-box-shadow: 0 40px 40px -10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 40px 40px -10px rgba(0, 0, 0, 0.4);
+  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
+  -ms-grid-rows: 135px 1fr;
+  -ms-grid-columns: 1fr;
   grid-template: 135px 1fr/1fr;
   width: 100%;
   max-width: 400px;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
   place-self: center;
   position: relative;
 }
 @media screen and (min-width: 900px) {
   .container {
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr 1fr;
     grid-template: 1fr/1fr 1fr;
     width: 90%;
     max-width: 920px;
@@ -43,11 +69,14 @@ body {
     place-items: center start;
   }
   .container:hover .image__box--desktop {
+    -webkit-transform: translate(-35px, -25%);
+    -ms-transform: translate(-35px, -25%);
     transform: translate(-35px, -25%);
   }
 }
 
 .faq__image {
+  display: -ms-grid;
   display: grid;
 }
 
@@ -62,11 +91,13 @@ body {
 
 .image__pattern--mobile,
 .image__woman--mobile {
+  -ms-grid-column-align: center;
   justify-self: center;
   position: relative;
 }
 
 .image__pattern--mobile {
+  -webkit-filter: brightness(50%);
   filter: brightness(50%);
 }
 
@@ -103,19 +134,29 @@ body {
 
   .image__pattern--desktop {
     left: -65px;
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
     transform: translateY(-40%);
     width: 450px;
   }
 
   .image__woman--desktop {
     left: -85px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 
   .image__box--desktop {
     left: -93px;
+    -webkit-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
     transform: translateY(-25%);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
   }
 }
 .faq__body {
@@ -164,12 +205,16 @@ body {
   font-size: 1.3rem;
 }
 .faq__field[open] .shevron {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .faq__question {
   padding-right: 20px;
   position: relative;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 .faq__question:hover {
@@ -181,8 +226,16 @@ body {
   position: absolute;
   right: 0;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform-origin: center 30%;
+  -ms-transform-origin: center 30%;
   transform-origin: center 30%;
 }
 
@@ -196,11 +249,11 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 15px;
   flex: 0 1 15px;
 }
 
 .attribution a {
   color: #3e52a3;
 }
-
-/*# sourceMappingURL=style.css.map */
